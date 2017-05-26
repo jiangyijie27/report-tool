@@ -1,0 +1,25 @@
+{
+  "name": "basic-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "basic-setup.sketchplugin",
+  "manifest": "src/manifest.json",
+  "scripts": {
+    "build": "skpm build",
+    "watch": "skpm build --watch",
+    "render": "skpm build --watch --run",
+    "render:once": "skpm build --run",
+    "link-plugin": "skpm link"
+  },
+  "author": "Don <dondondong@tencent.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "skpm": "^0.9.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.8",
+    "react": "^15.4.2",
+    "react-sketchapp": "^0.10.0",
+    "react-test-renderer": "^15.4.2"
+  }
+}

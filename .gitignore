@@ -1,0 +1,26 @@
+_tasks
+.DS_Store
+npm-debug.log
+node_modules
+dist/
+dev.
+dev/
+.idea/
+
+gulp-h5-tasks
+*.sublime-project
+*.sublime-workspace
+.tmtworkflowrc
+
+# 任务中的个人配置，比如个人的 rtx
+.gulp_task_config_local
+
+# runtime json files
+app/pages.json
+app/source-example.json
+
+# webpack build html
+pages-built
+
+upload-cdn.js
+upload-demo.js
