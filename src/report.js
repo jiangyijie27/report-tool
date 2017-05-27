@@ -1,12 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { render, Artboard, Text, View } from 'react-sketchapp'
-import Table from "./mp/Table"
-import Column from "./mp/Column"
 import lodash from "lodash"
 
 // 这里引入你的数据
-import data from "./data"
+import data from "./data/0522"
 
 const Document = ({ dataSource }) => {
 
