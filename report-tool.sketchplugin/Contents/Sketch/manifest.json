@@ -3,7 +3,7 @@
   "bundleVersion": 1,
   "commands": [
     {
-      "name": "react-sketchapp: Basic Setup",
+      "name": "Wxad Report Tool",
       "identifier": "main",
       "script": "report.js"
     }
@@ -16,7 +16,7 @@
   },
   "version": "1.0.0",
   "description": "",
-  "name": "basic-setup",
+  "name": "report-tool",
   "disableCocoaScriptPreprocessor": true,
   "appcastURL": "https://raw.githubusercontent.com//master/.appcast.xml"
 }

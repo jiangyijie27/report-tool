@@ -3,7 +3,7 @@
   "bundleVersion": 1,
   "commands": [
     {
-      "name": "react-sketchapp: Basic Setup",
+      "name": "Wxad Report Tool",
       "identifier": "main",
       "script": "table.js"
     }
@@ -16,6 +16,6 @@
   },
   "version": "1.0.0",
   "description": "",
-  "name": "basic-setup",
+  "name": "Wxad Report Tool",
   "disableCocoaScriptPreprocessor": true
 }
