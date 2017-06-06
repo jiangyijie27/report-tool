@@ -1,4 +1,5 @@
-# Basic setup
+# WeChat AD Design Group Weekly Report Tool
+**based on Airbnb's react-sketchapp**
 
 ## How to use
 Install the dependencies
