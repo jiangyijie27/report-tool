@@ -347,7 +347,7 @@ const Document = ({ dataSource }) => {
                                                                     width: 638,
                                                                     flexDirection: "row"
                                                                 }}>
-                                                                    {table.catdes}
+                                                                    {table.category + table.description}
                                                                     <Text
                                                                         style={{
                                                                             marginLeft: 13,
@@ -419,7 +419,7 @@ const Document = ({ dataSource }) => {
                                                                     width: 638,
                                                                     flexDirection: "row"
                                                                 }}>
-                                                                    {table.catdes}
+                                                                    {table.category + table.description}
                                                                     <Text
                                                                         style={{
                                                                             marginLeft: 13,
@@ -491,7 +491,7 @@ const Document = ({ dataSource }) => {
                                                                     width: 638,
                                                                     flexDirection: "row"
                                                                 }}>
-                                                                    {table.catdes}
+                                                                    {table.category + table.description}
                                                                     <Text
                                                                         style={{
                                                                             marginLeft: 13,
@@ -651,7 +651,7 @@ const Document = ({ dataSource }) => {
                                                                     width: 638,
                                                                     flexDirection: "row"
                                                                 }}>
-                                                                    {table.catdes}
+                                                                    {table.category + table.description}
                                                                     <Text
                                                                         style={{
                                                                             marginLeft: 13,
@@ -723,7 +723,7 @@ const Document = ({ dataSource }) => {
                                                                     width: 638,
                                                                     flexDirection: "row"
                                                                 }}>
-                                                                    {table.catdes}
+                                                                    {table.category + table.description}
                                                                     <Text
                                                                         style={{
                                                                             marginLeft: 13,
@@ -795,7 +795,7 @@ const Document = ({ dataSource }) => {
                                                                     width: 638,
                                                                     flexDirection: "row"
                                                                 }}>
-                                                                    {table.catdes}
+                                                                    {table.category + table.description}
                                                                     <Text
                                                                         style={{
                                                                             marginLeft: 13,
@@ -893,7 +893,7 @@ const Document = ({ dataSource }) => {
                                                         width: 638,
                                                         flexDirection: "row"
                                                     }}>
-                                                        {table.catdes}
+                                                        {table.category + table.description}
                                                         <Text
                                                             style={{
                                                                 marginLeft: 13,
@@ -964,7 +964,7 @@ const Document = ({ dataSource }) => {
                                                         width: 638,
                                                         flexDirection: "row"
                                                     }}>
-                                                        {table.catdes}
+                                                        {table.category + table.description}
                                                         <Text
                                                             style={{
                                                                 marginLeft: 13,
@@ -1035,7 +1035,7 @@ const Document = ({ dataSource }) => {
                                                         width: 638,
                                                         flexDirection: "row"
                                                     }}>
-                                                        {table.catdes}
+                                                        {table.category + table.description}
                                                         <Text
                                                             style={{
                                                                 marginLeft: 13,
