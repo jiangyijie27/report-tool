@@ -4,14 +4,20 @@ import { render, Artboard, Text, View } from 'react-sketchapp'
 import lodash from "lodash"
 
 // 这里引入你的数据
-import data from "./data/0522"
+// import data from "./data/0522"
+// import data from "./data/0612"
+import data from "./data/0626"
 
 const Document = ({ dataSource }) => {
 
     // 处理数据的逻辑：
     const important_index = data.find(o => o.state === "重点项目")
     const regular_index = data.find(o => o.state === "常规项目")
-    const other_index = lodash.findIndex(data, o => o.state === "其他")
+    let other_index = lodash.findIndex(data, o => o.state === "其他")
+
+    if(other_index === -1) {
+        other_index = data.length - 1
+    }
 
     const categories = data.filter((o, i) => o.state.indexOf("0") > -1)
     let other_category_index
@@ -377,7 +383,9 @@ const Document = ({ dataSource }) => {
                                             style={{
                                                 top: -1,
                                                 borderBottomWidth: 1,
-                                                borderBottomColor: "#e8e8e8"
+                                                borderBottomColor: "#e8e8e8",
+                                                lineHeight: 0,
+                                                height: 0
                                             }}
                                         ></View>
                                     </View> : <View style={{width: 0, height: 0}}></View>
@@ -449,7 +457,9 @@ const Document = ({ dataSource }) => {
                                             style={{
                                                 top: -1,
                                                 borderBottomWidth: 1,
-                                                borderBottomColor: "#e8e8e8"
+                                                borderBottomColor: "#e8e8e8",
+                                                lineHeight: 0,
+                                                height: 0
                                             }}
                                         ></View>
                                     </View>: <View style={{width: 0, height: 0}}></View>
@@ -521,7 +531,9 @@ const Document = ({ dataSource }) => {
                                             style={{
                                                 top: -1,
                                                 borderBottomWidth: 1,
-                                                borderBottomColor: "#e8e8e8"
+                                                borderBottomColor: "#e8e8e8",
+                                                lineHeight: 0,
+                                                height: 0
                                             }}
                                         ></View>
                                     </View> : <View style={{width: 0, height: 0}}></View>
@@ -681,7 +693,9 @@ const Document = ({ dataSource }) => {
                                             style={{
                                                 top: -1,
                                                 borderBottomWidth: 1,
-                                                borderBottomColor: "#e8e8e8"
+                                                borderBottomColor: "#e8e8e8",
+                                                lineHeight: 0,
+                                                height: 0
                                             }}
                                         ></View>
                                     </View> : <View style={{width: 0, height: 0}}></View>
@@ -752,6 +766,8 @@ const Document = ({ dataSource }) => {
                                         <View
                                             style={{
                                                 top: -1,
+                                                lineHeight: 0,
+                                                height: 0,
                                                 borderBottomWidth: 1,
                                                 borderBottomColor: "#e8e8e8"
                                             }}
@@ -825,7 +841,9 @@ const Document = ({ dataSource }) => {
                                             style={{
                                                 top: -1,
                                                 borderBottomWidth: 1,
-                                                borderBottomColor: "#e8e8e8"
+                                                borderBottomColor: "#e8e8e8",
+                                                lineHeight: 0,
+                                                height: 0
                                             }}
                                         ></View>
                                     </View> : <View style={{width: 0, height: 0}}></View>
@@ -834,243 +852,251 @@ const Document = ({ dataSource }) => {
                         })
                     }
                 </View>
-                <View>
-                    <Text
-                        style={{
-                            color: "#39BB4A",
-                            fontSize: 24,
-                            fontFamily: "PingFang SC",
-                            marginTop: 53,
-                            marginBottom: 40
-                        }}
-                    >
-                        其他
-                        <View
-                            style={{
-                                width: 41, 
-                                height: 3, 
-                                backgroundColor: "#39BB4A",
-                                marginTop: -3
-                            }}
-                        >
-                        </View>
-                    </Text>
-                    {
-                        other_table.find(o => o.state === "已完成") ? <View>
-                            <View
-                                style={{
-                                    flexDirection: "row",
-                                    borderTopWidth: 1,
-                                    borderTopColor: "#e8e8e8"
-                                }}
-                            >
-                                <Text style={{
-                                    lineHeight: 48,
-                                    color: "#4A4A4A",
-                                    fontSize: 16,
-                                    width: 106,
-                                    marginLeft: 21,
-                                    fontWeight: 500
-                                }}>
-                                    已完成
-                                </Text>
-                                <View>
+                {
+                    other_index === data.length - 1 ? <View style={{width: 0, height: 0}}></View> : <View>
+                                    <Text
+                                        style={{
+                                            color: "#39BB4A",
+                                            fontSize: 24,
+                                            fontFamily: "PingFang SC",
+                                            marginTop: 53,
+                                            marginBottom: 40
+                                        }}
+                                    >
+                                        其他
+                                        <View
+                                            style={{
+                                                width: 41, 
+                                                height: 3, 
+                                                backgroundColor: "#39BB4A",
+                                                marginTop: -3
+                                            }}
+                                        >
+                                        </View>
+                                    </Text>
                                     {
-                                        other_table.map((table, j) => {
-                                            if(table.state === "已完成") {
-                                                return <View
-                                                    key={j}
-                                                    style={{
-                                                        flexDirection: "row",
-                                                        borderBottomWidth: 1,
-                                                        borderBottomColor: "#e8e8e8"
-                                                    }}
-                                                >
-                                                    <Text style={{
-                                                        lineHeight: 48,
-                                                        color: "#4A4A4A",
-                                                        fontSize: 16,
-                                                        width: 638,
-                                                        flexDirection: "row"
-                                                    }}>
-                                                        {table.category + table.description}
-                                                        <Text
-                                                            style={{
-                                                                marginLeft: 13,
-                                                                color: "#9B9B9B",
-                                                                fontFamily: "PingFang SC"
-                                                            }}
-                                                        >
-                                                            {table.title}
-                                                        </Text>
-                                                    </Text>
-                                                    <Text style={{
-                                                        lineHeight: 48,
-                                                        color: "#9B9B9B",
-                                                        fontSize: 16,
-                                                        fontFamily: "PingFang SC",
-                                                        width: 197
-                                                    }}>
-                                                        {table.id}
-                                                    </Text>
+                                        other_table.find(o => o.state === "已完成") ? <View>
+                                            <View
+                                                style={{
+                                                    flexDirection: "row",
+                                                    borderTopWidth: 1,
+                                                    borderTopColor: "#e8e8e8"
+                                                }}
+                                            >
+                                                <Text style={{
+                                                    lineHeight: 48,
+                                                    color: "#4A4A4A",
+                                                    fontSize: 16,
+                                                    width: 106,
+                                                    marginLeft: 21,
+                                                    fontWeight: 500
+                                                }}>
+                                                    已完成
+                                                </Text>
+                                                <View>
+                                                    {
+                                                        other_table.map((table, j) => {
+                                                            if(table.state === "已完成") {
+                                                                return <View
+                                                                    key={j}
+                                                                    style={{
+                                                                        flexDirection: "row",
+                                                                        borderBottomWidth: 1,
+                                                                        borderBottomColor: "#e8e8e8"
+                                                                    }}
+                                                                >
+                                                                    <Text style={{
+                                                                        lineHeight: 48,
+                                                                        color: "#4A4A4A",
+                                                                        fontSize: 16,
+                                                                        width: 638,
+                                                                        flexDirection: "row"
+                                                                    }}>
+                                                                        {table.category + table.description}
+                                                                        <Text
+                                                                            style={{
+                                                                                marginLeft: 13,
+                                                                                color: "#9B9B9B",
+                                                                                fontFamily: "PingFang SC"
+                                                                            }}
+                                                                        >
+                                                                            {table.title}
+                                                                        </Text>
+                                                                    </Text>
+                                                                    <Text style={{
+                                                                        lineHeight: 48,
+                                                                        color: "#9B9B9B",
+                                                                        fontSize: 16,
+                                                                        fontFamily: "PingFang SC",
+                                                                        width: 197
+                                                                    }}>
+                                                                        {table.id}
+                                                                    </Text>
+                                                                </View>
+                                                            }
+                                                        })
+                                                    }
                                                 </View>
-                                            }
-                                        })
+                                            </View>
+                                            <View
+                                                style={{
+                                                    top: -1,
+                                                    borderBottomWidth: 1,
+                                                    borderBottomColor: "#e8e8e8",
+                                                    lineHeight: 0,
+                                                    height: 0
+                                                }}
+                                            ></View>
+                                        </View> : <View style={{width: 0, height: 0}}></View>
+                                    }
+                                    {
+                                        other_table.find(o => o.state === "进行中") ? <View>
+                                            <View
+                                                style={{
+                                                    flexDirection: "row"
+                                                }}
+                                            >
+                                                <Text style={{
+                                                    lineHeight: 48,
+                                                    color: "#4A4A4A",
+                                                    fontSize: 16,
+                                                    width: 106,
+                                                    marginLeft: 21,
+                                                    fontWeight: 500
+                                                }}>
+                                                    进行中
+                                                </Text>
+                                                <View>
+                                                    {
+                                                        other_table.map((table, j) => {
+                                                            if(table.state === "进行中") {
+                                                                return <View
+                                                                    key={j}
+                                                                    style={{
+                                                                        flexDirection: "row",
+                                                                        borderBottomWidth: 1,
+                                                                        borderBottomColor: "#e8e8e8"
+                                                                    }}
+                                                                >
+                                                                    <Text style={{
+                                                                        lineHeight: 48,
+                                                                        color: "#4A4A4A",
+                                                                        fontSize: 16,
+                                                                        width: 638,
+                                                                        flexDirection: "row"
+                                                                    }}>
+                                                                        {table.category + table.description}
+                                                                        <Text
+                                                                            style={{
+                                                                                marginLeft: 13,
+                                                                                color: "#9B9B9B",
+                                                                                fontFamily: "PingFang SC"
+                                                                            }}
+                                                                        >
+                                                                            {table.title}
+                                                                        </Text>
+                                                                    </Text>
+                                                                    <Text style={{
+                                                                        lineHeight: 48,
+                                                                        color: "#9B9B9B",
+                                                                        fontSize: 16,
+                                                                        fontFamily: "PingFang SC",
+                                                                        width: 197
+                                                                    }}>
+                                                                        {table.id}
+                                                                    </Text>
+                                                                </View>
+                                                            }
+                                                        })
+                                                    }
+                                                </View>
+                                            </View>
+                                            <View
+                                                style={{
+                                                    top: -1,
+                                                    borderBottomWidth: 1,
+                                                    borderBottomColor: "#e8e8e8",
+                                                    lineHeight: 0,
+                                                    height: 0
+                                                }}
+                                            ></View>
+                                        </View> : <View style={{width: 0, height: 0}}></View>
+                                    }
+                                    {
+                                        other_table.find(o => o.state === "待启动") ? <View>
+                                            <View
+                                                style={{
+                                                    flexDirection: "row"
+                                                }}
+                                            >
+                                                <Text style={{
+                                                    lineHeight: 48,
+                                                    color: "#4A4A4A",
+                                                    fontSize: 16,
+                                                    width: 106,
+                                                    marginLeft: 21,
+                                                    fontWeight: 500
+                                                }}>
+                                                    待启动
+                                                </Text>
+                                                <View>
+                                                    {
+                                                        other_table.map((table, j) => {
+                                                            if(table.state === "待启动") {
+                                                                return <View
+                                                                    key={j}
+                                                                    style={{
+                                                                        flexDirection: "row",
+                                                                        borderBottomWidth: 1,
+                                                                        borderBottomColor: "#e8e8e8"
+                                                                    }}
+                                                                >
+                                                                    <Text style={{
+                                                                        lineHeight: 48,
+                                                                        color: "#4A4A4A",
+                                                                        fontSize: 16,
+                                                                        width: 638,
+                                                                        flexDirection: "row"
+                                                                    }}>
+                                                                        {table.category + table.description}
+                                                                        <Text
+                                                                            style={{
+                                                                                marginLeft: 13,
+                                                                                color: "#9B9B9B",
+                                                                                fontFamily: "PingFang SC"
+                                                                            }}
+                                                                        >
+                                                                            {table.title}
+                                                                        </Text>
+                                                                    </Text>
+                                                                    <Text style={{
+                                                                        lineHeight: 48,
+                                                                        color: "#9B9B9B",
+                                                                        fontSize: 16,
+                                                                        fontFamily: "PingFang SC",
+                                                                        width: 197
+                                                                    }}>
+                                                                        {table.id}
+                                                                    </Text>
+                                                                </View>
+                                                            }
+                                                        })
+                                                    }
+                                                </View>
+                                            </View>
+                                            <View
+                                                style={{
+                                                    top: -1,
+                                                    borderBottomWidth: 1,
+                                                    borderBottomColor: "#e8e8e8",
+                                                    lineHeight: 0,
+                                                    height: 0
+                                                }}
+                                            ></View>
+                                        </View> : <View style={{width: 0, height: 0}}></View>
                                     }
                                 </View>
-                            </View>
-                            <View
-                                style={{
-                                    top: -1,
-                                    borderBottomWidth: 1,
-                                    borderBottomColor: "#e8e8e8"
-                                }}
-                            ></View>
-                        </View> : <View style={{width: 0, height: 0}}></View>
-                    }
-                    {
-                        other_table.find(o => o.state === "进行中") ? <View>
-                            <View
-                                style={{
-                                    flexDirection: "row"
-                                }}
-                            >
-                                <Text style={{
-                                    lineHeight: 48,
-                                    color: "#4A4A4A",
-                                    fontSize: 16,
-                                    width: 106,
-                                    marginLeft: 21,
-                                    fontWeight: 500
-                                }}>
-                                    进行中
-                                </Text>
-                                <View>
-                                    {
-                                        other_table.map((table, j) => {
-                                            if(table.state === "进行中") {
-                                                return <View
-                                                    key={j}
-                                                    style={{
-                                                        flexDirection: "row",
-                                                        borderBottomWidth: 1,
-                                                        borderBottomColor: "#e8e8e8"
-                                                    }}
-                                                >
-                                                    <Text style={{
-                                                        lineHeight: 48,
-                                                        color: "#4A4A4A",
-                                                        fontSize: 16,
-                                                        width: 638,
-                                                        flexDirection: "row"
-                                                    }}>
-                                                        {table.category + table.description}
-                                                        <Text
-                                                            style={{
-                                                                marginLeft: 13,
-                                                                color: "#9B9B9B",
-                                                                fontFamily: "PingFang SC"
-                                                            }}
-                                                        >
-                                                            {table.title}
-                                                        </Text>
-                                                    </Text>
-                                                    <Text style={{
-                                                        lineHeight: 48,
-                                                        color: "#9B9B9B",
-                                                        fontSize: 16,
-                                                        fontFamily: "PingFang SC",
-                                                        width: 197
-                                                    }}>
-                                                        {table.id}
-                                                    </Text>
-                                                </View>
-                                            }
-                                        })
-                                    }
-                                </View>
-                            </View>
-                            <View
-                                style={{
-                                    top: -1,
-                                    borderBottomWidth: 1,
-                                    borderBottomColor: "#e8e8e8"
-                                }}
-                            ></View>
-                        </View> : <View style={{width: 0, height: 0}}></View>
-                    }
-                    {
-                        other_table.find(o => o.state === "待启动") ? <View>
-                            <View
-                                style={{
-                                    flexDirection: "row"
-                                }}
-                            >
-                                <Text style={{
-                                    lineHeight: 48,
-                                    color: "#4A4A4A",
-                                    fontSize: 16,
-                                    width: 106,
-                                    marginLeft: 21,
-                                    fontWeight: 500
-                                }}>
-                                    待启动
-                                </Text>
-                                <View>
-                                    {
-                                        other_table.map((table, j) => {
-                                            if(table.state === "待启动") {
-                                                return <View
-                                                    key={j}
-                                                    style={{
-                                                        flexDirection: "row",
-                                                        borderBottomWidth: 1,
-                                                        borderBottomColor: "#e8e8e8"
-                                                    }}
-                                                >
-                                                    <Text style={{
-                                                        lineHeight: 48,
-                                                        color: "#4A4A4A",
-                                                        fontSize: 16,
-                                                        width: 638,
-                                                        flexDirection: "row"
-                                                    }}>
-                                                        {table.category + table.description}
-                                                        <Text
-                                                            style={{
-                                                                marginLeft: 13,
-                                                                color: "#9B9B9B",
-                                                                fontFamily: "PingFang SC"
-                                                            }}
-                                                        >
-                                                            {table.title}
-                                                        </Text>
-                                                    </Text>
-                                                    <Text style={{
-                                                        lineHeight: 48,
-                                                        color: "#9B9B9B",
-                                                        fontSize: 16,
-                                                        fontFamily: "PingFang SC",
-                                                        width: 197
-                                                    }}>
-                                                        {table.id}
-                                                    </Text>
-                                                </View>
-                                            }
-                                        })
-                                    }
-                                </View>
-                            </View>
-                            <View
-                                style={{
-                                    top: -1,
-                                    borderBottomWidth: 1,
-                                    borderBottomColor: "#e8e8e8"
-                                }}
-                            ></View>
-                        </View> : <View style={{width: 0, height: 0}}></View>
-                    }
-                </View>
+                }
             </View>
         </Artboard>
     )
