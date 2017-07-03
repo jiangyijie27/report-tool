@@ -18,5 +18,7 @@
   "description": "",
   "name": "report-tool",
   "disableCocoaScriptPreprocessor": true,
-  "appcastURL": "https://raw.githubusercontent.com//master/.appcast.xml"
+  "appcast": "https://raw.githubusercontent.com//master/.appcast.xml",
+  "author": "Don",
+  "email": "dondondong@tencent.com"
 }
