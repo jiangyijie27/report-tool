@@ -1,12 +1,18 @@
+// 这里输入你的文件名
+const date = "0711"
+
+
+
+
+
+// 这里往下你就别管了
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import { render, Artboard, Text, View } from 'react-sketchapp'
 import lodash from "lodash"
 
-// 这里引入你的数据
-// import data from "./data/0522"
-// import data from "./data/0612"
-import data from "./data/0626"
+const data = require("./data/" + date + ".json")
 
 const Document = ({ dataSource }) => {
 
