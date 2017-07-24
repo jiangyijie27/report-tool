@@ -6881,7 +6881,7 @@ module.exports = {
 
 module.exports = [{
     "state": "  微信广告设计组双周报内容汇总",
-    "id": "06.13 - 06.26"
+    "id": "07.11 - 07.24"
 }, {
     "state": "状态分为： 已完成、进行中、待启动 \n项目命名： 尽量与产品提的需求的命名一致，可参考edo发的周报里的项目名称\n\n备注：若是有上两周还在进行的项目，记得用同样的命名方式哟！，记得删除自己的旧项目"
 }, {
@@ -6905,39 +6905,57 @@ module.exports = [{
 }, {
     "state": "已完成",
     "category": "【新增功能】",
-    "description": "文中广告创建流程、广告预览",
+    "description": "OCPM前端样式",
+    "id": "Peiyao",
+    "title": "- 交互设计"
+}, {
+    "state": "已完成",
+    "category": "【新增功能】",
+    "description": "批量上传地域",
+    "id": "Peiyao",
+    "title": "- 交互设计"
+}, {
+    "state": "进行中",
+    "category": "【新增功能】",
+    "description": "三级结构3.2 创建流程",
+    "id": "Peiyao",
+    "title": "- 交互设计"
+}, {
+    "state": "进行中",
+    "category": "【规范拟定】",
+    "description": "三级结构，规范统一，总结",
+    "id": "Peiyao",
+    "title": "- 交互设计"
+}, {
+    "state": "进行中",
+    "category": "【视觉优化】",
+    "description": "三级结构视觉设计",
+    "id": "Dondon",
+    "title": "- 视觉设计"
+}, {
+    "state": "进行中",
+    "category": "【视觉优化】",
+    "description": "投放端组件库 v1.0.1 视觉更新",
+    "id": "Dondon",
+    "title": "- 视觉设计"
+}, {
+    "state": "进行中",
+    "category": "【新增功能】",
+    "description": "原生广告 H5 预览及客户端内嵌表单网页功能更新",
     "id": "Yexiao",
     "title": "- UI开发"
 }, {
     "state": "已完成",
-    "category": "【新增功能】",
-    "description": "邮箱广告接入投放端",
-    "id": "Shuyuan",
-    "title": "- 交互设计"
-}, {
-    "state": "已完成",
-    "category": "【组件库建设】",
-    "description": "语义化与键盘可访问性研究 及 日常维护",
+    "category": "【开发联调】",
+    "description": "pc 公众号广告预览优化",
     "id": "Yijie",
     "title": "- UI开发"
 }, {
     "state": "进行中",
     "category": "【新增功能】",
-    "description": "朋友圈广告预览支持电话拨号、网址可点击",
-    "id": "Yexiao",
+    "description": "自定义表单数据项弹窗构建",
+    "id": "Yijie",
     "title": "- UI开发"
-}, {
-    "state": "进行中",
-    "category": "【新增功能】",
-    "description": "三级结构3.1.1广告管理样式、3.2创建流程",
-    "id": "Peiyao",
-    "title": "- 交互设计"
-}, {
-    "state": "进行中",
-    "category": "【常规更新】",
-    "description": "原生推广页自由拼：表单组件样式设计",
-    "id": "Dondon",
-    "title": "- 视觉设计"
 }, {
     "state": "02 产品形态"
 }, {
@@ -6955,16 +6973,28 @@ module.exports = [{
     "id": "designerId",
     "title": "designerTitle"
 }, {
-    "state": "已完成",
+    "state": "进行中",
     "category": "【样式探索】",
-    "description": "朋友圈广告样式 - 投票与讨论",
-    "id": "Tooyang",
+    "description": "文中广告位样式设计2.0",
+    "id": "Tenten",
     "title": "- 视觉设计"
 }, {
     "state": "进行中",
     "category": "【样式探索】",
-    "description": "公众号广告-电商新样式探讨&测试",
+    "description": "互选广告-广告推荐硬广样式优化",
     "id": "Tenten",
+    "title": "- 视觉设计"
+}, {
+    "state": "进行中",
+    "category": "【样式探索】",
+    "description": "底部小程序广告样式探讨",
+    "id": "Tenten",
+    "title": "- 视觉设计"
+}, {
+    "state": "进行中",
+    "category": "【样式探索】",
+    "description": "腾讯视频广告形态设计",
+    "id": "Cason",
     "title": "- 视觉设计"
 }, {
     "state": "常规项目"
@@ -6986,82 +7016,46 @@ module.exports = [{
     "title": "designerTitle"
 }, {
     "state": "已完成",
-    "category": "【官网建设】",
-    "description": "在线学习文档配图更新+“设计规范与建议”版块内容更新",
-    "id": "Deartree、tenten",
+    "category": "【小助手】",
+    "description": "发文头图设计-合生元、口红集合（2篇）",
+    "id": "Tenten",
     "title": "- 视觉设计"
-}, {
-    "state": "已完成",
-    "category": "【官网建设】",
-    "description": "在线学习录入工具（增加编辑内容时离开页面提示）",
-    "id": "Yijie",
-    "title": "- UI开发"
-}, {
-    "state": "已完成",
-    "category": "【常规更新】",
-    "description": "优秀案例 - 配图、录屏制作及流程优化",
-    "id": "Tooyang",
-    "title": "- 视觉设计"
-}, {
-    "state": "已完成",
-    "category": "【开发联调】",
-    "description": "官网与案例录入工具（增加朋友圈新形式预览）",
-    "id": "She",
-    "title": "- UI开发"
-}, {
-    "state": "已完成",
-    "category": "【服务商系统】",
-    "description": "注册页面与工号管理页面更新",
-    "id": "Dondon、xiaoxiao",
-    "title": "- 视觉设计、交互设计"
-}, {
-    "state": "已完成",
-    "category": "【结案报告】",
-    "description": "结案报告3.0改版",
-    "id": "She",
-    "title": "- UI开发"
 }, {
     "state": "进行中",
+    "category": "【小助手】",
+    "description": "PPT规范2.0设计",
+    "id": "Tenten",
+    "title": "- 视觉设计"
+}, {
+    "state": "已完成",
     "category": "【官网建设】",
-    "description": "官网新增页面：“广告样式设计规范”交互demo尝试",
+    "description": "优秀案例支持唤起原生广告（后台联调+前端）",
+    "id": "She",
+    "title": "- UI开发"
+}, {
+    "state": "已完成",
+    "category": "【官网建设】",
+    "description": "微信广告官网改版结构初稿确认",
+    "id": "Deartree",
+    "title": "- 视觉设计"
+}, {
+    "state": "已完成",
+    "category": "【官网建设】",
+    "description": "官网在线学习-自定义原生推广页文章配图制作",
     "id": "Deartree",
     "title": "- 视觉设计"
 }, {
     "state": "进行中",
     "category": "【官网建设】",
-    "description": "官网与案例录入工具（支持多公众号组合，互选视频广告等）",
-    "id": "She",
-    "title": "- UI开发"
-}, {
-    "state": "进行中",
-    "category": "【小助手】",
-    "description": "微案例封面设计-三元x微信运动",
-    "id": "Tenten",
+    "description": "公众号广告基础基础介绍-文章配图更新优化",
+    "id": "Deartree",
     "title": "- 视觉设计"
 }, {
-    "state": "进行中",
+    "state": "已完成",
     "category": "【常规更新】",
-    "description": "文章及案例更新",
+    "description": "官网在线学习更新内容",
     "id": "Yijie",
     "title": "- UI开发"
-}, {
-    "state": "进行中",
-    "category": "【新增功能】",
-    "description": "PDF 工具视觉优化",
-    "id": "Tenten",
-    "title": "- 视觉设计"
-}, {
-    "state": "进行中",
-    "category": "【新增功能】",
-    "description": "PDF 工具加新功能，优化体验，部署新版本",
-    "id": "Yexiao",
-    "title": "- UI开发"
-}, {
-    "state": "进行中",
-    "category": "【规范拟定】",
-    "description": "公众号互选视频样式介绍页优化",
-    "id": "Tenten、yexiao",
-    "title": "- 视觉设计"
 }, {
     "state": "02 运营支持"
 }, {
@@ -7080,28 +7074,43 @@ module.exports = [{
     "title": "designerTitle"
 }, {
     "state": "已完成",
-    "category": "【定稿跟进】",
-    "description": "【加勒比】视觉跟进",
-    "id": "Tooyang",
+    "category": "【运营后台】",
+    "description": "待投放系统：预锁定排期管理",
+    "id": "Peiyao",
+    "title": "- 交互设计"
+}, {
+    "state": "已完成",
+    "category": "【运营后台】",
+    "description": "NOVA系统：1、出价建议  2、基本信息内容功能调整",
+    "id": "Peiyao",
+    "title": "- 交互设计"
+}, {
+    "state": "已完成",
+    "category": "【运营后台】",
+    "description": "朋友圈广告审核系统：1、列表页信息展示优化  2、查看资质大图方式优化",
+    "id": "Xiaoxiao",
+    "title": "- 交互设计"
+}, {
+    "state": "已完成",
+    "category": "【运营后台】",
+    "description": "服务商系统：1、 财务管理支持资金回划  2、授权管理支持金额细化展示",
+    "id": "Xiaoxiao",
+    "title": "- 交互设计"
+}, {
+    "state": "进行中",
+    "category": "【运营后台】",
+    "description": "服务商系统：新增信用金体系",
+    "id": "Xiaoxiao",
+    "title": "- 交互设计"
+}, {
+    "state": "已完成",
+    "category": "【视觉优化】",
+    "description": "《Q2朋友圈驳回TOP20》文档配图制作与排版优化",
+    "id": "Deartree",
     "title": "- 视觉设计"
 }, {
-    "state": "待启动",
-    "category": "【常规更新】",
-    "description": "【NOVA系统】大盘维度",
-    "id": "Peiyao",
-    "title": "- 交互设计"
-}, {
-    "state": "待启动",
-    "category": "【常规更新】",
-    "description": "【询量系统】新版本",
-    "id": "Peiyao",
-    "title": "- 交互设计"
-}, {
-    "state": "待启动",
-    "category": "【常规更新】",
-    "description": "【Ω系统】新版本",
-    "id": "Peiyao",
-    "title": "- 交互设计"
+    "state": "进行中",
+    "category": "【视觉优化】"
 }, {
     "state": "03 其他"
 }, {
@@ -7119,23 +7128,11 @@ module.exports = [{
     "id": "designerId",
     "title": "designerTitle"
 }, {
-    "state": "已完成",
-    "category": "【分享】",
-    "description": "微信广告助手发文图设计总结",
-    "id": "Tenten",
-    "title": "- 视觉设计"
-}, {
     "state": "进行中",
-    "category": "【设计支持】",
-    "description": "广告好声音第一季总结及第二季设计支持",
-    "id": "Cason",
+    "category": "【视觉优化】",
+    "description": "TAD设计中心官网设计稿",
+    "id": "Deartree",
     "title": "- 视觉设计"
-}, {
-    "state": "进行中",
-    "category": "【分享】",
-    "description": "组件库设计制作总结",
-    "id": "Dondon、Yijie",
-    "title": "- 视觉设计、UI 开发"
 }, {
     "state": "列表数据,勿删"
 }, {
@@ -7204,6 +7201,8 @@ module.exports = [{
     "state": "【运营后台】"
 }, {
     "state": "【结案报告】"
+}, {
+    "state": "【专业建设】"
 }];
 
 /***/ }),
